@@ -1,12 +1,8 @@
-"""
-creare uno script che ogni mattina alle 10:00 apre un file di testo txt e mi mostri il contenuto
-"""
-
 import time
 import os
 
 # path del file
-path = "./remember.txt"
+path = "./remember.rft"
 
 # funzione per aprire il file
 def open_file():
@@ -14,7 +10,7 @@ def open_file():
         # se il file non esiste, lo crea
         if not os.path.exists(path):
             with open(path, "w") as file:
-                file.write("hello world")
+                file.write("Ciao\n\nRicordati di fare qualcosa di bello oggi!\n\nTipo:  PAGA LE TASSE UNIVERSITARIE!")
         else:
             with open(path, "r") as file:
                 print(file.read())
