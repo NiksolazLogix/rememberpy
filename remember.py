@@ -1,6 +1,7 @@
 import time
 import os
 import subprocess
+import datetime
 
 # path del file
 path = "./remember.txt"
@@ -28,7 +29,8 @@ def check_time():
 
     while True:
         current_time = time.localtime()
-        if current_time.tm_hour == 10 and current_time.tm_min == 18:
+        print(current_time.tm_hour, current_time.tm_min, current_time.tm_sec)
+        if current_time.tm_hour == 10 and current_time.tm_min == 30:
             open_file()
             break
         else:
