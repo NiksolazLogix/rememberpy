@@ -30,7 +30,7 @@ def check_time():
 
     while True:
         current_time = time.localtime()
-        if current_time.tm_hour == 9 and current_time.tm_min == 7:
+        if current_time.tm_hour == 10 and current_time.tm_min == 30:
             open_file()
             break
         else:
