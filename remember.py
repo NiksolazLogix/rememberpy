@@ -1,8 +1,9 @@
 import time
 import os
+import subprocess
 
 # path del file
-path = "./remember.rft"
+path = "./remember.txt"
 
 # funzione per aprire il file
 def open_file():
@@ -14,6 +15,7 @@ def open_file():
         else:
             with open(path, "r") as file:
                 print(file.read())
+                subprocess.run(["open", path])
     except FileNotFoundError:
         print("File not found")
 
@@ -26,7 +28,7 @@ def check_time():
 
     while True:
         current_time = time.localtime()
-        if current_time.tm_hour == 10 and current_time.tm_min == 30:
+        if current_time.tm_hour == 10 and current_time.tm_min == 18:
             open_file()
             break
         else:
